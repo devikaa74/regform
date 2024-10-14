@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #ff7eb3, #0099ff); /* Mixed blue and pink gradient */
+  height: 100vh; /* Full viewport height for gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 600px; /* Adjust width as needed */
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column; /* Align children vertically */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 15px; /* Space between form elements */
+}
+
+.form-input {
+  width: 100%; /* Full width input */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.terms-checkbox {
+  display: flex; /* Flexbox to align checkbox and text */
+  align-items: center; /* Center vertically */
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: green;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #ffb3ff; /* Change color on hover */
+}
+
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-left: 10px; /* Margin for error message */
+}
