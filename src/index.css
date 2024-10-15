@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #ff7eb3, #0099ff); /* Mixed blue and pink gradient */
+  background: linear-gradient(135deg, #ff7eb3, #0099ff); /* Blue and pink gradient */
   height: 100vh; /* Full viewport height for gradient */
   display: flex;
   justify-content: center;
@@ -13,7 +13,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 600px; /* Adjust width as needed */
+  width: 600px; /* Adjust width */
+  max-width: 90%; /* Responsive for smaller screens */
 }
 
 .registration-form {
@@ -24,6 +25,7 @@ body {
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  color: #333; /* Darker heading color */
 }
 
 .mb-3 {
@@ -35,6 +37,7 @@ h1 {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
 }
 
 .terms-checkbox {
@@ -42,22 +45,55 @@ h1 {
   align-items: center; /* Center vertically */
 }
 
-.submit-button {
+.submit-button, .cancel-button {
   padding: 10px;
-  background-color: green;
   border: none;
   border-radius: 5px;
   color: white;
   font-size: 16px;
   cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #0099ff;
 }
 
 .submit-button:hover {
   background-color: #ffb3ff; /* Change color on hover */
 }
 
+.cancel-button {
+  background-color: #ff4d4d; /* Red cancel button */
+}
+
+.cancel-button:hover {
+  background-color: #ff9999; /* Lighter red on hover */
+}
+
 .error {
   color: red;
-  font-size: 0.8em;
-  margin-left: 10px; /* Margin for error message */
+  font-size: 0.85em;
+  margin-top: 5px; /* Margin for better spacing */
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Space buttons apart */
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    width: 100%; /* Full width on smaller screens */
+    padding: 15px;
+  }
+
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+  }
+
+  .submit-button, .cancel-button {
+    width: 100%;
+    margin-bottom: 10px; /* Space buttons on mobile */
+  }
 }
